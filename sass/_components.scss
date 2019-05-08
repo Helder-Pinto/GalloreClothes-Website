@@ -1,0 +1,484 @@
+
+/////LOGO///////////////////
+
+.logo {
+    height: 3rem;
+    cursor: pointer;
+    
+    
+}
+////////SEARCH////////
+
+.search{
+
+    //background: yellow;
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-largest1) {
+        flex: 0 0 30%;
+    }
+
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        color: inherit;
+        background-color: rgb(55, 48, 48);
+        border: none; 
+        padding: .7rem 2rem;
+        border-radius: 100px;
+        width: 90%;
+        height: 2rem;
+        margin-right: -3rem;
+        
+        &:focus{
+            outline: none;
+            background-color: rgb(69, 60, 60);
+        }
+
+    }
+    &__button{
+        border: none;
+        background-color: transparent;
+        &:focus{
+            outline: none;
+            background-color: rgb(69, 60, 60);
+        }
+
+
+    }
+    &__icon{
+        height: 1.6rem;
+        width: 1.6rem;
+        fill: white;;
+    }
+}
+
+
+
+
+
+////////USER NAVIGATION
+
+.info-nav{
+   // background: green;
+    display: flex;
+    align-items: center;
+
+    & > * {
+        padding: 0 2rem;
+
+        @media only screen and (max-width: $bp-largest1) {
+            padding: 0 0;
+        }
+        
+       
+       
+    }    
+    .navigation {
+        
+
+        &__list{
+            display: flex;
+            list-style: none;
+        }
+    
+        &__item{
+            margin: 0 3rem;
+            padding: 1rem;
+            @media only screen and (max-width: $bp-large) {
+                margin: 0 1rem;
+            }
+            @media only screen and (max-width: $bp-medium) {
+                
+                padding: 0;
+            }
+            @media only screen and (max-width: $bp-Small) {
+                
+                margin: 0 0.5rem;
+            }
+            
+        }
+        &__link{
+            &:link,
+            &:visited{
+                text-decoration: none;
+                color: white;
+
+                &:hover{
+                    color: rgba(255, 166, 0, 0.708);
+                }
+            }
+        }
+        
+        
+    }
+}
+
+.user-nav {
+   align-self: stretch;
+   
+    display: flex;
+    align-items: center;
+
+ 
+    &__icon{
+        height: 1.60rem;
+        width: 1.60rem;
+        fill: white;
+        cursor: pointer;
+        @media only screen and (max-width: $bp-medium) {
+             height: 1rem;
+            width: 1rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+             display: none;
+        }
+        
+
+        &:hover{
+            fill: rgba(255, 0, 0, 0.625);
+        }
+
+        
+    }
+    & > * {
+        padding: 0 4rem;
+       
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0 3rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+                
+            padding: 0 2rem;
+        }
+       
+       
+    }   
+    
+    
+
+
+    
+}
+
+
+.description{
+    //display: flex;
+    //flex-direction: column;
+    //width: 80%;
+    //padding: 20rem;
+    
+    display: flex;
+    position: relative;
+ 
+    @media only screen and (max-width: $bp-XS) {
+        display: block;
+    }
+ 
+
+    &-text{
+        padding: 20rem;
+        flex: 0 0 65%;
+        @media only screen and (max-width: $bp-large) {
+            padding: 8rem 10rem;
+        }
+        
+       
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 10rem;
+
+        }
+    }
+    
+    
+}
+
+.heading{
+    font-size: 10rem;
+    margin-bottom: 10rem;
+    color: rgb(3, 191, 163);
+    @media only screen and (max-width: $bp-largest1) {
+        font-size: 7rem; 
+    }
+    @media only screen and (max-width: $bp-large) {
+        font-size: 5rem; 
+    }
+    @media only screen and (max-width: $bp-medium) {
+        font-size: 4rem; 
+    }
+    @media only screen and (max-width: $bp-medSmall) {
+        font-size: 3rem; 
+    }
+    @media only screen and (max-width: $bp-Small) {
+        font-size: 2rem; 
+    }
+    @media only screen and (max-width: $bp-XS) {
+        font-size: 1rem; 
+    }
+
+    &-1{
+        position: absolute;
+        top: 30rem;
+        @media only screen and (max-width: $bp-large) {
+            top: 18rem;
+        }
+        
+
+        @media only screen and (max-width: $bp-medium) {
+            top: 9rem;
+        }
+        @media only screen and (max-width: $bp-medSmall) {
+            top: 7rem; 
+        }
+
+    }
+    &-2{
+        color: orange;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+      
+    }
+
+
+    
+}
+
+.paragraph{
+    width: 100%;
+    font-size: 2rem;
+    padding-left: 1rem;
+    @media only screen and (max-width: $bp-medSmall) {
+        font-size: 1.5rem;
+    }
+}
+
+.btn-text{
+    &:link,
+    &:visited {
+        font-size: 1.6rem;
+        color: rgba(0, 0, 0, 0.735);
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid  rgba(0, 0, 0, 0.543);
+        padding: 3px;
+        margin-top: 2.5rem;
+        transition: all .5s;
+        margin-left: 1rem;
+        }
+    &:hover{
+        background-color: var( --color-primary);
+        color: white;
+        box-shadow: 0 1rem 2rem rgba(black, .15);
+        transform: translateY(-2px);
+        border-radius: 20%;
+        border-bottom: 1px solid var( --color-primary);
+
+    }  
+    &:active{
+        box-shadow: 0 .5rem 1rem rgba(black, .15);
+        transform: translateY(0);
+    }  
+
+ 
+}
+
+
+////////phot-grid 
+
+.gallery {
+ display: flex;
+ justify-content: center;
+
+
+    &__item{
+        margin: 3rem;
+        width: 33.3%;
+        filter: brightness(.7);
+        transition: all .1s;
+        margin-bottom: 8rem;
+        
+        &:hover{
+            filter: brightness(1);
+           
+        }
+
+
+        &:hover &--caption{
+            color: orange;
+        }
+
+        &--caption{
+            margin-top: 1rem;
+            color: black;
+            font-size: 1.5rem;
+        
+        }
+       
+    }
+
+
+    &__photo {
+       width: 100%;
+        display: block;
+        box-shadow: 0 1rem 2rem rgba(black, .15);
+
+        &:hover{
+            cursor: pointer;
+        }
+        
+        
+        
+
+        
+    }
+}
+.heading-3{
+    font-size: 4rem;
+    font-weight: 200;
+    margin-left: 20rem; 
+  
+    padding-top: 2rem;
+    color: orange;
+}
+
+.insta{
+    display: flex;
+
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    padding-bottom: 8rem;
+    
+    &__item{
+        
+        margin: 3rem;
+        color: orange;
+        max-height: 40rem;
+        flex: 0 0 auto;
+        box-shadow: 0 1rem 2rem rgba(black, .4);
+      
+        &:hover{
+            cursor: pointer;
+            filter: brightness(1.2)
+
+        }
+
+
+
+    }
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.address{
+    display: flex;
+    flex-direction: row;
+    //flex-wrap: wrap;
+    width: 100%;
+
+    justify-content: space-evenly;
+    box-shadow: 0 1rem 2rem rgba(black, .15);
+    @media only screen and (max-width: $bp-medium) {
+        display: block;
+    }
+   
+     
+
+     &__box{
+         height: 40rem;
+         width: 100%;
+         @media only screen and (max-width: $bp-medium) {
+            height: 30rem;
+         width: 100%;
+        }
+        &-store{
+            background-image:url("../img/last1.jpg");
+            background-size: cover;
+            background-position: center;
+            @media only screen and (max-width: $bp-medium) {
+                display:none;
+            }
+        }
+
+        &-text{
+            background-image: linear-gradient(rgba(70, 37, 37, 0.577), rgba(77, 34, 34, 0.605) ),url("../img/lastpic.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+           
+        }
+     }
+
+    
+}
+
+.texto{
+    color: white;
+    font-size: 2.25rem;
+    text-align: center;
+   // margin-left: 15rem;
+    letter-spacing: .5rem;
+
+    .find{
+        color: var(--color-secondary)
+    }
+}
+
+.footer{
+    &__info-box{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    &__list{
+        list-style: none;
+        //margin: 5rem;
+    }
+
+    &__logo-box{
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+
+    &__image{
+        height: 6rem;
+
+    }
+
+    &__legal
+    &__legal{
+
+        &-text{
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: .2rem;
+            margin-top: 2rem;
+            margin-bottom: -3rem
+    
+        }
+        &-me{
+            color: orange;
+    
+        }
+
+    }
+}
+
+
+
+

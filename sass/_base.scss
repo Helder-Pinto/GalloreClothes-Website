@@ -1,0 +1,258 @@
+:root{
+  --color-primary: rgb(3, 191, 163);
+  --color-secondary:  orange;
+
+}
+
+$bp-largest1: 81em; //1300px
+$bp-large: 70em; //1118px
+$bp-medium: 56em; //900px
+$bp-medSmall: 42em; //672x
+$bp-Small: 37em; //600x
+$bp-XS: 35em; //532
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; 
+    @media only screen and (max-width: $bp-medSmall) {
+                
+        font-size: 55%; 
+    }
+    
+}
+
+body { 
+    font-family: "Playfair Display", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color:white;
+   
+}
+
+.header {
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-large) {
+        min-height: 95vh;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        min-height: 90vh;
+    }
+    @media only screen and (max-width: $bp-medSmall) {
+        min-height: 85vh;
+    }
+    @media only screen and (max-width: $bp-Small) {
+        min-height: 80vh;
+    }
+
+    
+    &__leftbox{
+        background: var( --color-primary);
+        //background: white;
+        width: 100%; 
+        &__main-girl{
+            
+                position: relative;
+                background-image: url(../img/main_girl.PNG);
+                background-size: 70%;
+                background-repeat: no-repeat;
+                background-position: center;
+                height: 100%;
+                width: 100%;    
+                transition: all .4s;
+                backface-visibility: hidden;
+                &:hover{
+                    transform: scale(1.02);
+                   
+                }
+
+                &__side-nav{
+                    //left: -25rem;
+                    box-shadow: 0 4rem 4rem rgba(black, .6); 
+                }
+
+
+            .side-nav {
+                &__item::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 3px;
+                    background-color: orange;
+                    transform: scaleY(0);
+                    transition: transform .2s,
+                                width .4s cubic-bezier(1,0,0,1),
+                                filter .1s;
+                        backface-visibility: hidden;
+                     
+                   
+                }
+            
+            
+                &__item:hover::before{
+                    transform: scaleY(.9);
+                    width: 100%;
+                
+                }
+
+                }
+
+
+            }      
+      
+        
+    }
+    &__rightbox{
+        //background-image: 
+       // background-color: rgb(240, 0, 0); 
+        background-color:orange; 
+        width: 100%;
+        
+        &__main-boy{
+            background-image: url(../img/boy2.PNG);
+            background-size: 140%;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            transition: all .4s;
+            backface-visibility: hidden;
+            &:hover{
+                transform: scale(1.02);
+
+            }
+            &__side-nav{
+                right:0;
+                //right: -25rem;
+               box-shadow: 0 4rem 4rem rgba(black, .6);
+              
+               
+            }
+       
+            
+            .side-nav {
+                &__item::before{
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 3px;
+                    background-color:  var( --color-primary);
+                    transform: scaleY(0);
+                    transition: transform .2s,
+                                width .4s cubic-bezier(1,0,0,1);
+                    
+                    
+                   
+                }
+            
+            
+                &__item:hover::before{
+                    transform: scaleY(.9);
+                    width: 100%;
+                    
+
+                
+                }
+                  
+      
+
+                }
+            
+            
+        }
+
+}
+
+.side-nav{
+    position: absolute;
+    list-style: none;
+    margin: 5rem;
+    
+    text-align: center;
+    transition: all .5s;
+    background-color: black;
+    @media only screen and (max-width: $bp-largest1) {
+        margin-top: 10rem;    
+    }
+    @media only screen and (max-width: $bp-large) {
+        margin-top: 15rem; 
+    }
+    @media only screen and (max-width: $bp-medium) {
+                
+        margin: 20rem 0;
+    }
+
+    &__item{
+        position: relative;
+        
+        &:not(:last-child){
+           margin-bottom: 5rem;
+
+           @media only screen and (max-width: $bp-largest1) {
+            margin-bottom: 4rem;
+        }
+        @media only screen and (max-width: $bp-large) {
+            margin-bottom: 3rem;
+        }
+        @media only screen and (max-width: $bp-medium) {
+                
+            margin-bottom: 2rem;
+        }
+
+         }
+        }
+   
+    &__item:active::before{
+        filter: brightness(110%);
+    }
+
+    &__link:link,
+    &__link:visited{
+        text-decoration: none;
+        color:white;
+        font-size: 1.6rem;
+        position: relative;
+        font-weight: 700;
+        display: block;
+        padding: 2rem;
+        z-index: 100;
+        
+        @media only screen and (max-width: $bp-largest1) {
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            font-size: 1.4rem;
+            padding: 0.7rem;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+       
+    }
+   
+}
+}

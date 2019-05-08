@@ -1,0 +1,101 @@
+.navigation{
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   // padding: 0rem 3rem;
+    background: black;
+
+    @media only screen and (max-width: $bp-Small) {
+        font-size: 1rem;
+        justify-content: space-evenly;
+    }
+}
+
+.section-collection{
+    padding: 10rem 0;
+
+    background-image:   url("../img/pooja-crop.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    @media only screen and (max-width: $bp-Small) {
+       
+        padding: 0 0 2rem 0;
+    }
+    
+}
+
+
+
+.section-male{
+  
+    background-color: azure;
+    
+    position: relative;
+
+}
+
+.section-female{
+    background-image:linear-gradient(to right, rgba(36, 14, 14, 0.797), rgba(18, 7, 7, 0.872)),   url("../img/backgroung\ store.jpg");
+    
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+}
+
+.section__address {
+    background-color: azure;
+    padding: 12rem 20rem;
+    @media only screen and (max-width: $bp-largest1) {
+        padding: 10rem 15rem;
+    }
+
+    @media only screen and (max-width: $bp-large) {
+        padding: 5rem 10rem;
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 0;
+    }
+}
+
+.footer{
+    background-color: rgb(79, 78, 78);
+    padding: 5rem 30rem;
+    font-size: 1.4rem;
+    color: rgb(145, 145, 145);
+    @media only screen and (max-width: $bp-largest1) {
+        padding: 4rem 25rem;
+        font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-large) {
+        padding: 3.5rem 20rem;
+        font-size: 1.4rem;
+    }
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem 15rem;
+        font-size: 1rem; 
+    }
+    @media only screen and (max-width: $bp-medSmall) {
+        padding: 2.5rem 10rem;
+        font-size: 1rem;
+    }
+  
+
+    .info {
+        transition: all 0.1s;
+        &:hover{
+            color: orange;
+            cursor: pointer;
+        }
+   
+    
+    &__header{
+        color:white;
+        margin-bottom: 1rem;
+        }
+    }
+    
+}
